@@ -1,0 +1,5 @@
+blink			flicker			jerk			spin
+bob			float			oscillate			twirl
+dance			flutter			pulsate			wiggle
+dart			glitter			rotate			wink
+flash			glow			sparkle			wobble
