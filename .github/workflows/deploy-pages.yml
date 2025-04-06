@@ -38,10 +38,12 @@ jobs:
       - name: Create project directories
         run: |
           mkdir -p ./deploy/Visual-Metaphysics-No2-Reincarnation/site
+          mkdir -p ./deploy/Visual-Metaphysics-No1-FlyingSaucers/site
       
       - name: Copy project site files
         run: |
-          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/*
+          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/
+          cp -r ./Visual-Metaphysics-No1-FlyingSaucers/site/* ./deploy/Visual-Metaphysics-No1-FlyingSaucers/site/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
