@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - 'index.html'
       - 'Visual-Metaphysics-No2-Reincarnation/site/**'
   workflow_dispatch:
 
@@ -28,10 +29,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Copy site folder to deployment location
+      - name: Create deployment directory
+        run: mkdir -p ./deploy
+        
+      - name: Copy main landing page
         run: |
-          mkdir -p ./deploy
-          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/
+          if [ -f "./index.html" ]; then
+            cp ./index.html ./deploy/
+          fi
+      
+      - name: Create project directories
+        run: |
+          mkdir -p ./deploy/Visual-Metaphysics-No2-Reincarnation/site
+      
+      - name: Copy project site files
+        run: |
+          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

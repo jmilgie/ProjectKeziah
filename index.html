@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Metaphysics Project Collection</title>
+    <style>
+        /* Global Styles - 1957 Mid-Century Modern Aesthetic */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono&display=swap');
+        
+        :root {
+            --color-primary: #D2B48C; /* Tan */
+            --color-secondary: #556B2F; /* Dark Olive Green */
+            --color-accent: #8B4513; /* Saddle Brown */
+            --color-light: #F5F5DC; /* Beige */
+            --color-dark: #2F4F4F; /* Dark Slate Gray */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Roboto Mono', monospace;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            position: relative;
+        }
+        
+        .period-stamp {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 1.6rem;
+            padding: 1rem;
+            border: 2px solid var(--color-dark);
+            transform: rotate(5deg);
+        }
+        
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .intro-section {
+            margin-bottom: 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .intro-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Project Cards */
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .project-card {
+            flex: 0 0 300px; /* Fixed width for cards */
+            max-width: 350px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border: 5px solid var(--color-primary);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--color-secondary);
+            color: var(--color-light);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            text-align: center;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        
+        .project-link:hover {
+            background-color: var(--color-accent);
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: var(--color-secondary);
+            color: var(--color-light);
+            padding: 3rem;
+            margin: 3rem 0;
+            border-radius: 5px;
+        }
+        
+        .about-section h3 {
+            color: var(--color-light);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        /* 1950s Design Elements */
+        .atomic-shape {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .circle1 {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            top: 20%;
+            left: 10%;
+        }
+        
+        .circle2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            bottom: 30%;
+            right: 15%;
+        }
+        
+        .boomerang {
+            width: 200px;
+            height: 80px;
+            background-color: var(--color-primary);
+            border-radius: 100px 0 0 100px;
+            transform: rotate(45deg);
+            top: 40%;
+            right: 5%;
+        }
+
+        /* Special Button Style */
+        .special-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--color-accent);
+            color: var(--color-light);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .special-button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Atomic shapes for 50s vibe -->
+    <div class="atomic-shape circle1"></div>
+    <div class="atomic-shape circle2"></div>
+    <div class="atomic-shape boomerang"></div>
+    
+    <header class="fade-in">
+        <div class="period-stamp">1956-2025</div>
+        <h1>Visual Metaphysics</h1>
+        <h2>Digital Recreation Project</h2>
+    </header>
+    
+    <main>
+        <section class="intro-section fade-in">
+            <h3>Rediscovering Lost Mid-Century Masterpieces</h3>
+            <p>Welcome to the Visual Metaphysics Digital Recreation Project, dedicated to preserving and studying the innovative information charts created by Fred Keziah in the 1950s. These remarkable works combine philosophical exploration with the distinctive aesthetic sensibilities of mid-century modern design.</p>
+            <p>Each project in this collection represents a meticulous digital recreation based on archival research, bringing these lost treasures back into public view after decades of obscurity.</p>
+        </section>
+        
+        <section class="projects-container">
+            <div class="project-card">
+                <img src="Visual-Metaphysics-No1-FlyingSaucers/site/img/landing.png" alt="UFO Chart" class="project-image">
+                <div class="project-content">
+                    <h4 class="project-title">No. 1: Flying Saucers (1956)</h4>
+                    <p class="project-description">A graphic colored chart picturing 228 drawings of saucer shapes, formations, maneuvers and spacepeople. Numerous listings of colors, sounds, speeds, sizes, etc. Originally published on July 2, 1956. Our recreation is based on the 2nd edition from 1958.</p>
+                    <a href="#" class="project-link">Coming Soon</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="Visual-Metaphysics-No2-Reincarnation/site/img/landing.png" alt="Reincarnation Chart" class="project-image">
+                <div class="project-content">
+                    <h4 class="project-title">No. 2: Reincarnation (1957)</h4>
+                    <p class="project-description">Fred Keziah's groundbreaking exploration of spiritual rebirth through avant-garde visual language, originally produced in May 1957.</p>
+                    <a href="Visual-Metaphysics-No2-Reincarnation/site/landing-page.html" class="project-link">Explore</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section fade-in">
+            <h3>About the Visual Metaphysics Series</h3>
+            <p>Fred S. Keziah (1920-2010) was a Navy-trained illustrator and animator who specialized in educational graphics and informational art. After his military service, he self-published a series of "information sheets" from his home in Arlington, Virginia.</p>
+            <p>The Visual Metaphysics series represents Keziah's ambitious attempt to encapsulate complex phenomena in single-page visual charts. Drawing on both scientific concepts and metaphysical traditions, these works occupy a unique intersection of mid-century design, information visualization, and spiritual exploration.</p>
+            <p>The series reflects the cultural tensions of the 1950s—a decade characterized by both rigid conformity and burgeoning counterculture movements. Keziah's work bridges these worlds, employing the precision and optimism of modernist design to explore unconventional subjects like UFOs and reincarnation that challenged mainstream scientific narratives.</p>
+        </section>
+        
+        <div style="text-align: center; margin: 4rem 0;">
+            <h3 style="margin-bottom: 1.5rem;">Join Our Effort</h3>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Help us continue to discover, document, and restore these unique cultural artifacts from the golden age of information design.</p>
+            <a href="mailto:ProjectKeziah@protonmail.com" class="special-button">Support the Project</a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Methodology</a>
+            <a href="#">Research</a>
+            <a href="mailto:ProjectKeziah@protonmail.com">Contact</a>
+            <a href="https://x.com/ProjectKeziah">@ProjectKeziah</a>
+        </div>
+        <p>2025 Visual Metaphysics Digital Recreation Project. Original works created 1956-1958 by Fred Keziah.</p>
+    </footer>
+    
+    <script>
+        // Simple script to add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animations for any future elements
+            // Timeline section has been removed
+        });
+    </script>
+</body>
+</html>

@@ -11,8 +11,9 @@ This site is a digital recreation project for Fred Keziah's "Visual Metaphysics 
 To make changes to this site:
 
 1. Modify files in the \Visual-Metaphysics-No2-Reincarnation/site\ directory
-2. Commit and push to GitHub
-3. GitHub Actions will automatically deploy to GitHub Pages
+2. To update the main landing page, edit the \index.html\ file in the root directory
+3. Commit and push to GitHub
+4. GitHub Actions will automatically deploy to GitHub Pages
 
 ## Live Site
 
