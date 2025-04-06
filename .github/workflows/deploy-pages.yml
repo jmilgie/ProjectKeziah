@@ -3,10 +3,6 @@
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'index.html'
-      - 'Visual-Metaphysics-No1-FlyingSaucers/site/**'
-      - 'Visual-Metaphysics-No2-Reincarnation/site/**'
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -41,11 +37,10 @@ jobs:
       
       - name: Create project directories
         run: |
-          mkdir -p ./deploy/Visual-Metaphysics-No1-FlyingSaucers/site
           mkdir -p ./deploy/Visual-Metaphysics-No2-Reincarnation/site
+      
       - name: Copy project site files
         run: |
-          cp -r ./Visual-Metaphysics-No1-FlyingSaucers/site/* ./deploy/Visual-Metaphysics-No1-FlyingSaucers/site/
           cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/
       
       - name: Setup Pages
