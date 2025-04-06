@@ -41,7 +41,7 @@ jobs:
       
       - name: Copy project site files
         run: |
-          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/
+          cp -r ./Visual-Metaphysics-No2-Reincarnation/site/* ./deploy/Visual-Metaphysics-No2-Reincarnation/site/*
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
