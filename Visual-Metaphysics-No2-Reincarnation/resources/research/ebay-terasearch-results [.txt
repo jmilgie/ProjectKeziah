@@ -1,0 +1,122 @@
+  "results": [
+        {
+            "listing": {
+                "image": {
+                    "title": "Vintage Metaphysical Poster: REINCARNATION Keziah, 1957, Extremely Rare",
+                    "URL": "//i.ebayimg.com/images/g/xKcAAOSw05Jfy~uO/s-l1200.jpg"
+                },
+                "itemId": {
+                    "textSpans": [
+                        {
+                            "text": "233810095879"
+                        }
+                    ],
+                    "value": "233810095879"
+                },
+                "title": {
+                    "textSpans": [
+                        {
+                            "text": "Vintage Metaphysical Poster: REINCARNATION Keziah, 1957, Extremely Rare"
+                        }
+                    ]
+                },
+                "formatList": [
+                    {
+                        "textSpans": [
+                            {
+                                "text": "Fixed price"
+                            }
+                        ],
+                        "accessibilityText": "Fixed price"
+                    }
+                ],
+                "moreImages": [
+                    {
+                        "title": "-",
+                        "URL": "//i.ebayimg.com/images/g/xKcAAOSw05Jfy~uO/s-l1200.jpg"
+                    }
+                ]
+            },
+            "actions": {
+                "options": [
+                    {
+                        "value": "EXCLUDED_LISTING",
+                        "text": "Exclude listing"
+                    }
+                ],
+                "defaultOption": {
+                    "value": "Edit",
+                    "text": "Edit"
+                },
+                "accessibilityText": "Actions"
+            },
+            "avgsalesprice": {
+                "avgsalesprice": {
+                    "textSpans": [
+                        {
+                            "text": "$75.00"
+                        }
+                    ]
+                },
+                "averageshipping": {
+                    "textSpans": [
+                        {
+                            "text": "+$5.70 shipping"
+                        }
+                    ]
+                },
+                "format": {
+                    "textSpans": [
+                        {
+                            "text": "Fixed price"
+                        }
+                    ],
+                    "accessibilityText": "Fixed price"
+                }
+            },
+            "avgshipping": {
+                "avgshipping": {
+                    "textSpans": [
+                        {
+                            "text": "$5.70"
+                        }
+                    ]
+                },
+                "freeshipping": {
+                    "textSpans": [
+                        {
+                            "text": "0% Free shipping"
+                        }
+                    ]
+                }
+            },
+            "itemssold": {
+                "textSpans": [
+                    {
+                        "text": "1"
+                    }
+                ]
+            },
+            "totalsales": {
+                "textSpans": [
+                    {
+                        "text": "$75.00"
+                    }
+                ]
+            },
+            "bids": {
+                "textSpans": [
+                    {
+                        "text": "–"
+                    }
+                ]
+            },
+            "datelastsold": {
+                "textSpans": [
+                    {
+                        "text": "Feb 27, 2021"
+                    }
+                ]
+            }
+        }
+    ],
