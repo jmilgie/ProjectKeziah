@@ -30,11 +30,12 @@
             color: var(--color-dark);
             line-height: 1.6;
             overflow-x: hidden;
+            width: 100%;
         }
         
         /* Header */
         header {
-            padding: 3rem 2rem;
+            padding: 3rem 1rem;
             text-align: center;
             background-color: var(--color-primary);
             color: var(--color-dark);
@@ -43,75 +44,76 @@
         
         .period-stamp {
             position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 1.6rem;
-            padding: 1rem;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.2rem;
+            padding: 0.5rem;
             border: 2px solid var(--color-dark);
             transform: rotate(5deg);
         }
         
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
         
         h2 {
             font-family: var(--font-heading);
-            font-size: 1.6rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
             font-weight: 400;
         }
         
         /* Main Content */
         main {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2rem 1rem;
         }
         
         .intro-section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             text-align: center;
+            width: 100%;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 1rem;
         }
         
         .intro-section p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 1.5rem;
         }
         
         /* Project Cards */
         .projects-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 2rem 0;
+            width: 100%;
         }
         
         .project-card {
-            flex: 0 0 300px; /* Fixed width for cards */
+            width: 100%;
             max-width: 350px;
-        }
-        
-        .project-card {
             background-color: white;
             border: 5px solid var(--color-primary);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
             display: flex;
             flex-direction: column;
         }
         
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .project-image {
@@ -129,7 +131,7 @@
         
         .project-title {
             font-family: var(--font-heading);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--color-secondary);
             margin-bottom: 1rem;
         }
@@ -160,16 +162,17 @@
         .about-section {
             background-color: var(--color-secondary);
             color: var(--color-light);
-            padding: 3rem;
-            margin: 3rem 0;
+            padding: 2rem 1.5rem;
+            margin: 2rem 0;
             border-radius: 5px;
+            width: 100%;
         }
         
         .about-section h3 {
             color: var(--color-light);
             margin-bottom: 1.5rem;
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
         
         /* Footer */
@@ -177,14 +180,16 @@
             background-color: var(--color-dark);
             color: var(--color-light);
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem 1rem;
             font-size: 0.9rem;
+            width: 100%;
         }
         
         .footer-links {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
             margin: 1rem 0;
         }
         
@@ -212,56 +217,133 @@
             position: absolute;
             opacity: 0.1;
             z-index: -1;
+            display: none; /* Hide on mobile by default */
         }
         
-        .circle1 {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: var(--color-accent);
-            top: 20%;
-            left: 10%;
-        }
-        
-        .circle2 {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: var(--color-secondary);
-            bottom: 30%;
-            right: 15%;
-        }
-        
-        .boomerang {
-            width: 200px;
-            height: 80px;
-            background-color: var(--color-primary);
-            border-radius: 100px 0 0 100px;
-            transform: rotate(45deg);
-            top: 40%;
-            right: 5%;
-        }
-
         /* Special Button Style */
         .special-button {
             display: inline-block;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             background-color: var(--color-accent);
             color: var(--color-light);
             text-decoration: none;
             font-family: var(--font-heading);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border: none;
             cursor: pointer;
             margin-top: 1.5rem;
             transition: background-color 0.3s ease, transform 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         
         .special-button:hover {
             background-color: var(--color-secondary);
             transform: translateY(-3px);
+        }
+        
+        /* Support section */
+        .support-section {
+            text-align: center; 
+            margin: 3rem 0;
+            padding: 0 1rem;
+        }
+        
+        .support-section h3 {
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+        }
+        
+        .support-section p {
+            max-width: 600px; 
+            margin: 0 auto 2rem;
+        }
+        
+        /* Media Queries for Responsive Design */
+        @media (min-width: 768px) {
+            /* Tablet and larger */
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .period-stamp {
+                font-size: 1.4rem;
+                padding: 0.8rem;
+                top: 2rem;
+                right: 2rem;
+            }
+            
+            .projects-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .project-card {
+                flex: 0 0 calc(50% - 2rem);
+            }
+            
+            .footer-links {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            /* Show atomic shapes on larger screens */
+            .atomic-shape {
+                display: block;
+            }
+            
+            .circle1 {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: var(--color-accent);
+                top: 20%;
+                left: 10%;
+            }
+            
+            .circle2 {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: var(--color-secondary);
+                bottom: 30%;
+                right: 15%;
+            }
+            
+            .boomerang {
+                width: 200px;
+                height: 80px;
+                background-color: var(--color-primary);
+                border-radius: 100px 0 0 100px;
+                transform: rotate(45deg);
+                top: 40%;
+                right: 5%;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            /* Desktop */
+            header {
+                padding: 3rem 2rem;
+            }
+            
+            main {
+                padding: 3rem 2rem;
+            }
+            
+            .project-card {
+                flex: 0 0 300px;
+            }
+            
+            .intro-section p {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -290,7 +372,7 @@
                 <div class="project-content">
                     <h4 class="project-title">No. 1: Flying Saucers (1956)</h4>
                     <p class="project-description">A graphic colored chart picturing 228 drawings of saucer shapes, formations, maneuvers and spacepeople. Numerous listings of colors, sounds, speeds, sizes, etc. Originally published on July 2, 1956. Our recreation is based on the 2nd edition from 1958.</p>
-                    <a href="#" class="project-link">Coming Soon</a>
+                    <a href="Visual-Metaphysics-No1-FlyingSaucers/site/landing-page.html" class="project-link">Explore</a>
                 </div>
             </div>
             
@@ -311,9 +393,9 @@
             <p>The series reflects the cultural tensions of the 1950s—a decade characterized by both rigid conformity and burgeoning counterculture movements. Keziah's work bridges these worlds, employing the precision and optimism of modernist design to explore unconventional subjects like UFOs and reincarnation that challenged mainstream scientific narratives.</p>
         </section>
         
-        <div style="text-align: center; margin: 4rem 0;">
-            <h3 style="margin-bottom: 1.5rem;">Join Our Effort</h3>
-            <p style="max-width: 600px; margin: 0 auto 2rem;">Help us continue to discover, document, and restore these unique cultural artifacts from the golden age of information design.</p>
+        <div class="support-section">
+            <h3>Join Our Effort</h3>
+            <p>Help us continue to discover, document, and restore these unique cultural artifacts from the golden age of information design.</p>
             <a href="mailto:ProjectKeziah@protonmail.com" class="special-button">Support the Project</a>
         </div>
     </main>
@@ -331,7 +413,6 @@
         // Simple script to add some interactivity
         document.addEventListener('DOMContentLoaded', function() {
             // Add scroll animations for any future elements
-            // Timeline section has been removed
         });
     </script>
 </body>
